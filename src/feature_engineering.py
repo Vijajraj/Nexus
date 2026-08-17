@@ -111,11 +111,12 @@ def run_feature_engineering():
         
         for _, post in suspicious_posts.iterrows():
             post_t = post['timestamp']
-            # Check for justifying large transaction in preceding 7 days
+            # Check for justifying large transaction in preceding 7 days (must be a purchase/payment or withdrawal, not a transfer)
             justifying_txns = p_txns[
                 (p_txns['timestamp'] >= post_t - timedelta(days=7)) & 
                 (p_txns['timestamp'] <= post_t) & 
-                ((p_txns['amount'] > 5 * avg_txn_amount) | (p_txns['amount'] >= 10000))
+                ((p_txns['amount'] > 5 * avg_txn_amount) | (p_txns['amount'] >= 10000)) &
+                (p_txns['type'].isin(['payment', 'withdrawal']))
             ]
             if len(justifying_txns) == 0:
                 lifestyle_flag = 1
