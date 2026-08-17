@@ -59,102 +59,161 @@ def generate_synthetic_data(seed=42):
         is_susp = person["is_suspicious"] == 1
         contacts = known_contacts[pid]
 
-        # Generate standard baseline activity for everyone
-        # 1. Calls
-        num_calls = random.randint(20, 35)
-        for _ in range(num_calls):
-            days_offset = random.uniform(0, total_days - 7) # Keep baseline in first 23 days mostly
-            call_time = start_date + timedelta(days=days_offset)
-            known = random.random() < 0.95
-            number = random.choice(contacts) if known else fake.phone_number()
-            calls_data.append({
-                "call_id": f"c_{call_id_counter:05d}",
-                "person_id": pid,
-                "called_number": number,
-                "timestamp": call_time.strftime("%Y-%m-%dT%H:%M:%S"),
-                "duration": random.randint(30, 400),
-                "is_known_contact": int(known)
-            })
-            call_id_counter += 1
+        if not is_susp:
+            # --- NORMAL PERSON ACTIVITY (Uniformly distributed) ---
+            # 1. Calls
+            num_calls = random.randint(20, 40)
+            for _ in range(num_calls):
+                days_offset = random.uniform(0, total_days)
+                call_time = start_date + timedelta(days=days_offset)
+                known = random.random() < 0.95 # 95% known
+                number = random.choice(contacts) if known else fake.phone_number()
+                calls_data.append({
+                    "call_id": f"c_{call_id_counter:05d}",
+                    "person_id": pid,
+                    "called_number": number,
+                    "timestamp": call_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "duration": random.randint(30, 400),
+                    "is_known_contact": int(known)
+                })
+                call_id_counter += 1
 
-        # 2. Transactions
-        num_txns = random.randint(15, 25)
-        for _ in range(num_txns):
-            days_offset = random.uniform(0, total_days - 7)
-            txn_time = start_date + timedelta(days=days_offset)
-            amount = round(random.uniform(100, 2000), 2) # average txn is around ₹1,000
-            txn_type = random.choice(["payment", "withdrawal"])
-            txns_data.append({
-                "txn_id": f"t_{txn_id_counter:05d}",
-                "person_id": pid,
-                "amount": amount,
-                "timestamp": txn_time.strftime("%Y-%m-%dT%H:%M:%S"),
-                "counterparty": fake.name(),
-                "type": txn_type
-            })
-            txn_id_counter += 1
+            # 2. Transactions
+            num_txns = random.randint(15, 30)
+            for _ in range(num_txns):
+                days_offset = random.uniform(0, total_days)
+                txn_time = start_date + timedelta(days=days_offset)
+                amount = round(random.uniform(100, 2000), 2)
+                txn_type = random.choice(["payment", "withdrawal"])
+                txns_data.append({
+                    "txn_id": f"t_{txn_id_counter:05d}",
+                    "person_id": pid,
+                    "amount": amount,
+                    "timestamp": txn_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "counterparty": fake.name(),
+                    "type": txn_type
+                })
+                txn_id_counter += 1
 
-        # 3. Social Posts
-        num_posts = random.randint(3, 8)
-        for _ in range(num_posts):
-            days_offset = random.uniform(0, total_days - 7)
-            post_time = start_date + timedelta(days=days_offset)
-            tags = ["daily", "life"]
-            posts_data.append({
-                "post_id": f"p_{post_id_counter:05d}",
-                "person_id": pid,
-                "timestamp": post_time.strftime("%Y-%m-%dT%H:%M:%S"),
-                "content_tags": ",".join(tags),
-                "mentioned_accounts": ""
-            })
-            post_id_counter += 1
+            # 3. Social Posts
+            num_posts = random.randint(5, 10)
+            for _ in range(num_posts):
+                days_offset = random.uniform(0, total_days)
+                post_time = start_date + timedelta(days=days_offset)
+                tags = ["daily", "life"]
+                posts_data.append({
+                    "post_id": f"p_{post_id_counter:05d}",
+                    "person_id": pid,
+                    "timestamp": post_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "content_tags": ",".join(tags),
+                    "mentioned_accounts": ""
+                })
+                post_id_counter += 1
 
-        if is_susp:
-            # PLANTING PATTERN 1: Call -> Txn Spike -> Luxury Post (MUST fall within the last 7 days, i.e., Aug 24 - Aug 30)
-            # Let's plant it around August 26
-            p1_call_time = datetime(2026, 8, 26, 14, 0, 0)
-            unknown_num = fake.phone_number()
-            
-            # Call to unknown number
-            calls_data.append({
-                "call_id": f"c_{call_id_counter:05d}",
-                "person_id": pid,
-                "called_number": unknown_num,
-                "timestamp": p1_call_time.strftime("%Y-%m-%dT%H:%M:%S"),
-                "duration": random.randint(150, 300),
-                "is_known_contact": 0
-            })
-            call_id_counter += 1
+        else:
+            # --- SUSPICIOUS PERSON ACTIVITY ---
+            # 1. Baseline activity (Aug 1 to Aug 23)
+            # Calls (low frequency in baseline)
+            num_calls = random.randint(10, 15)
+            for _ in range(num_calls):
+                days_offset = random.uniform(0, total_days - 7)
+                call_time = start_date + timedelta(days=days_offset)
+                known = random.random() < 0.98
+                number = random.choice(contacts) if known else fake.phone_number()
+                calls_data.append({
+                    "call_id": f"c_{call_id_counter:05d}",
+                    "person_id": pid,
+                    "called_number": number,
+                    "timestamp": call_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "duration": random.randint(30, 300),
+                    "is_known_contact": int(known)
+                })
+                call_id_counter += 1
 
-            # Transaction Spike (5-10x their normal amount of ~₹1,000, i.e. ₹8,000 - ₹10,000)
-            # Must follow 5-20 min later
-            p1_txn_time = p1_call_time + timedelta(minutes=random.randint(5, 20))
+            # Transactions (low frequency, small amounts)
+            num_txns = random.randint(8, 12)
+            for _ in range(num_txns):
+                days_offset = random.uniform(0, total_days - 7)
+                txn_time = start_date + timedelta(days=days_offset)
+                amount = round(random.uniform(100, 1500), 2)
+                txn_type = random.choice(["payment", "withdrawal"])
+                txns_data.append({
+                    "txn_id": f"t_{txn_id_counter:05d}",
+                    "person_id": pid,
+                    "amount": amount,
+                    "timestamp": txn_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "counterparty": fake.name(),
+                    "type": txn_type
+                })
+                txn_id_counter += 1
+
+            # Posts (low frequency)
+            num_posts = random.randint(2, 4)
+            for _ in range(num_posts):
+                days_offset = random.uniform(0, total_days - 7)
+                post_time = start_date + timedelta(days=days_offset)
+                tags = ["daily"]
+                posts_data.append({
+                    "post_id": f"p_{post_id_counter:05d}",
+                    "person_id": pid,
+                    "timestamp": post_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "content_tags": ",".join(tags),
+                    "mentioned_accounts": ""
+                })
+                post_id_counter += 1
+
+            # 2. PLANTING PATTERN 1: Call -> Txn Spike -> Luxury Post in the last 7 days (Aug 24 - Aug 30)
+            # We plant a call burst in the last 7 days to trigger call_burst_score and new_contact_ratio
+            # Generate 12 calls in the last week (representing a flurry of activity)
+            burst_start = datetime(2026, 8, 25, 9, 0, 0)
+            for k in range(12):
+                call_time = burst_start + timedelta(hours=k * 4, minutes=random.randint(0, 50))
+                # Make 4 of these calls to unknown contacts (triggering new_contact_ratio)
+                known = k not in [2, 5, 8, 11]
+                number = random.choice(contacts) if known else fake.phone_number()
+                calls_data.append({
+                    "call_id": f"c_{call_id_counter:05d}",
+                    "person_id": pid,
+                    "called_number": number,
+                    "timestamp": call_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                    "duration": random.randint(60, 300),
+                    "is_known_contact": int(known)
+                })
+                
+                # The call at index 5 is the suspicious trigger call
+                if k == 5:
+                    trigger_call_time = call_time
+                    trigger_unknown_num = number
+                call_id_counter += 1
+
+            # Now plant the spike transaction following 5-20 min after the trigger call
+            spike_time = trigger_call_time + timedelta(minutes=random.randint(5, 20))
+            # Normal amount is ~₹1,000, so spike is 8-10x, i.e. ₹8,000 - ₹10,000
             spike_amount = round(random.uniform(8000, 10000), 2)
             txns_data.append({
                 "txn_id": f"t_{txn_id_counter:05d}",
                 "person_id": pid,
                 "amount": spike_amount,
-                "timestamp": p1_txn_time.strftime("%Y-%m-%dT%H:%M:%S"),
-                "counterparty": "Offshore Entity Ltd",
-                "type": "transfer" # Using 'transfer' type so it doesn't count as a justifying 'payment' or 'withdrawal'
+                "timestamp": spike_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "counterparty": "Offshore Shell Corp",
+                "type": "transfer" # transfer type does not justify lifestyle post
             })
             txn_id_counter += 1
 
-            # Social Post (1-2 days later tagged "luxury_item" or "travel")
-            p1_post_time = p1_txn_time + timedelta(days=random.uniform(1.1, 1.8))
+            # Plant the social post 1-2 days after the transaction spike
+            post_time = spike_time + timedelta(days=random.uniform(1.1, 1.8))
             post_tag = random.choice(["luxury_item", "travel"])
             posts_data.append({
                 "post_id": f"p_{post_id_counter:05d}",
                 "person_id": pid,
-                "timestamp": p1_post_time.strftime("%Y-%m-%dT%H:%M:%S"),
+                "timestamp": post_time.strftime("%Y-%m-%dT%H:%M:%S"),
                 "content_tags": post_tag,
-                "mentioned_accounts": "@yacht_club"
+                "mentioned_accounts": "@luxury_resort"
             })
             post_id_counter += 1
 
-            # PLANTING PATTERN 2: Structuring
-            # 3-5 transactions in the ₹45,000-49,999 band within a single week
-            # Let's place them around August 10 to August 14
+            # 3. PLANTING PATTERN 2: Structuring
+            # 3-5 transactions in the ₹45,000-49,999 band within a single week (Aug 10 - Aug 15)
             structuring_start = datetime(2026, 8, 10, 10, 0, 0)
             num_structuring_txns = random.randint(3, 5)
             for j in range(num_structuring_txns):
@@ -165,7 +224,7 @@ def generate_synthetic_data(seed=42):
                     "person_id": pid,
                     "amount": amount,
                     "timestamp": structuring_time.strftime("%Y-%m-%dT%H:%M:%S"),
-                    "counterparty": "Self Deposit ATM",
+                    "counterparty": "ATM Cash Deposit",
                     "type": "deposit"
                 })
                 txn_id_counter += 1
