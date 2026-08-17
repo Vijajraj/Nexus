@@ -24,12 +24,16 @@ def train_risk_model():
     X = df_merged[feature_cols]
 
     # Train XGBoost Classifier
-    # Using small max_depth and estimators suitable for a toy dataset
+    # Using specific colsample and weight parameters to ensure all features are represented in SHAP
     model = xgb.XGBClassifier(
         random_state=42, 
-        n_estimators=50, 
+        n_estimators=300, 
         max_depth=3, 
-        learning_rate=0.1
+        learning_rate=0.03,
+        colsample_bytree=0.3,
+        colsample_bylevel=0.3,
+        colsample_bynode=0.3,
+        min_child_weight=0
     )
     model.fit(X, y)
 
