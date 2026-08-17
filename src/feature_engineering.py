@@ -35,6 +35,8 @@ def run_feature_engineering():
         # Baseline stats
         total_txns = len(p_txns)
         avg_txn_amount = p_txns['amount'].mean() if total_txns > 0 else 0.0
+        normal_txns = p_txns[p_txns['amount'] < 40000]
+        normal_avg_txn = normal_txns['amount'].mean() if len(normal_txns) > 0 else avg_txn_amount
 
         # --- 1. call_burst_score ---
         # (calls in last 7 days) / (historical average calls per 7-day window)
@@ -61,10 +63,10 @@ def run_feature_engineering():
             new_contact_ratio = 0.0
 
         # --- 3. txn_spike_score ---
-        # (largest recent transaction amount) / (that person's average transaction amount)
+        # (largest recent transaction amount) / (that person's average normal transaction amount)
         recent_txns = p_txns[p_txns['timestamp'] >= recent_start]
-        if len(recent_txns) > 0 and avg_txn_amount > 0:
-            txn_spike_score = recent_txns['amount'].max() / avg_txn_amount
+        if len(recent_txns) > 0 and normal_avg_txn > 0:
+            txn_spike_score = recent_txns['amount'].max() / normal_avg_txn
         else:
             txn_spike_score = 0.0
 
@@ -86,8 +88,8 @@ def run_feature_engineering():
         # minutes between a call to an unknown number and the nearest large transaction after it
         # (smaller = more suspicious; cap at 1440 if none found)
         unknown_calls = p_calls[p_calls['is_known_contact'] == 0]
-        # A transaction is "large" if it's 5x the average transaction amount OR greater than ₹10,000
-        large_txns = p_txns[(p_txns['amount'] > 5 * avg_txn_amount) | (p_txns['amount'] >= 10000)]
+        # A transaction is "large" if it's 5x the normal average transaction amount OR greater than ₹10,000
+        large_txns = p_txns[(p_txns['amount'] > 5 * normal_avg_txn) | (p_txns['amount'] >= 10000)]
         
         min_proximity = 1440.0
         
@@ -115,7 +117,7 @@ def run_feature_engineering():
             justifying_txns = p_txns[
                 (p_txns['timestamp'] >= post_t - timedelta(days=7)) & 
                 (p_txns['timestamp'] <= post_t) & 
-                ((p_txns['amount'] > 5 * avg_txn_amount) | (p_txns['amount'] >= 10000)) &
+                ((p_txns['amount'] > 5 * normal_avg_txn) | (p_txns['amount'] >= 10000)) &
                 (p_txns['type'].isin(['payment', 'withdrawal']))
             ]
             if len(justifying_txns) == 0:
