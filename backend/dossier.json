@@ -2,27 +2,27 @@
   {
     "person_id": "p_001",
     "name": "Aryan Maharaj",
-    "risk_score": 0.6874,
+    "risk_score": 0.9516,
     "rank": 1,
     "top_factors": [
       {
-        "feature": "txn_spike_score",
-        "label": "Transaction amount spike compared to average",
-        "shap_value": 1.2723,
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.8975,
         "evidence": {
-          "type": "transaction_list",
-          "transactions": [
-            {
-              "amount": 49644.56,
-              "timestamp": "2026-08-11T10:00:00"
-            }
-          ]
+          "type": "social_post",
+          "post": {
+            "content_tags": [
+              "luxury_item"
+            ],
+            "timestamp": "2026-08-27T17:12:41"
+          }
         }
       },
       {
         "feature": "call_burst_score",
         "label": "High frequency of recent calls compared to baseline",
-        "shap_value": 1.07,
+        "shap_value": 0.852,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -36,14 +36,14 @@
         }
       },
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.8505,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "5743748969",
-            "timestamp": "2026-08-27T05:12:00"
+            "number": "919333346800",
+            "timestamp": "2026-08-26T05:29:00"
           },
           "transaction": {
             "amount": 9525.02,
@@ -56,27 +56,27 @@
   {
     "person_id": "p_002",
     "name": "Adya Tella",
-    "risk_score": 0.6874,
+    "risk_score": 0.9516,
     "rank": 2,
     "top_factors": [
       {
-        "feature": "txn_spike_score",
-        "label": "Transaction amount spike compared to average",
-        "shap_value": 1.2723,
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.8975,
         "evidence": {
-          "type": "transaction_list",
-          "transactions": [
-            {
-              "amount": 49672.6,
-              "timestamp": "2026-08-12T12:00:00"
-            }
-          ]
+          "type": "social_post",
+          "post": {
+            "content_tags": [
+              "luxury_item"
+            ],
+            "timestamp": "2026-08-28T00:12:07"
+          }
         }
       },
       {
         "feature": "call_burst_score",
         "label": "High frequency of recent calls compared to baseline",
-        "shap_value": 1.07,
+        "shap_value": 0.852,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -90,14 +90,14 @@
         }
       },
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.8505,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "919991738168",
-            "timestamp": "2026-08-27T05:04:00"
+            "number": "917248251353",
+            "timestamp": "2026-08-26T05:47:00"
           },
           "transaction": {
             "amount": 8807.55,
@@ -110,27 +110,27 @@
   {
     "person_id": "p_003",
     "name": "Raagini Pandya",
-    "risk_score": 0.6874,
+    "risk_score": 0.9516,
     "rank": 3,
     "top_factors": [
       {
-        "feature": "txn_spike_score",
-        "label": "Transaction amount spike compared to average",
-        "shap_value": 1.2723,
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.8975,
         "evidence": {
-          "type": "transaction_list",
-          "transactions": [
-            {
-              "amount": 47181.53,
-              "timestamp": "2026-08-10T12:00:00"
-            }
-          ]
+          "type": "social_post",
+          "post": {
+            "content_tags": [
+              "travel"
+            ],
+            "timestamp": "2026-08-27T17:59:20"
+          }
         }
       },
       {
         "feature": "call_burst_score",
         "label": "High frequency of recent calls compared to baseline",
-        "shap_value": 1.07,
+        "shap_value": 0.852,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -144,14 +144,14 @@
         }
       },
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.8505,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "2575326033",
-            "timestamp": "2026-08-27T05:16:00"
+            "number": "3354216894",
+            "timestamp": "2026-08-26T05:21:00"
           },
           "transaction": {
             "amount": 8076.51,
@@ -164,27 +164,27 @@
   {
     "person_id": "p_004",
     "name": "Advika Jayaraman",
-    "risk_score": 0.6874,
+    "risk_score": 0.9516,
     "rank": 4,
     "top_factors": [
       {
-        "feature": "txn_spike_score",
-        "label": "Transaction amount spike compared to average",
-        "shap_value": 1.2723,
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.8975,
         "evidence": {
-          "type": "transaction_list",
-          "transactions": [
-            {
-              "amount": 49523.29,
-              "timestamp": "2026-08-12T13:00:00"
-            }
-          ]
+          "type": "social_post",
+          "post": {
+            "content_tags": [
+              "travel"
+            ],
+            "timestamp": "2026-08-27T09:17:44"
+          }
         }
       },
       {
         "feature": "call_burst_score",
         "label": "High frequency of recent calls compared to baseline",
-        "shap_value": 1.07,
+        "shap_value": 0.852,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -198,14 +198,14 @@
         }
       },
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.8505,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "910119721811",
-            "timestamp": "2026-08-27T05:24:00"
+            "number": "1173934835",
+            "timestamp": "2026-08-26T05:40:00"
           },
           "transaction": {
             "amount": 9412.84,
@@ -216,29 +216,15 @@
     ]
   },
   {
-    "person_id": "p_020",
-    "name": "Wishi Varma",
-    "risk_score": 0.1555,
+    "person_id": "p_005",
+    "name": "Lekha Gupta",
+    "risk_score": 0.0053,
     "rank": 5,
     "top_factors": [
       {
-        "feature": "txn_spike_score",
-        "label": "Transaction amount spike compared to average",
-        "shap_value": 1.2723,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": [
-            {
-              "amount": 1948.93,
-              "timestamp": "2026-08-25T22:40:44"
-            }
-          ]
-        }
-      },
-      {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -247,47 +233,47 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "9526949588",
-            "timestamp": "2026-08-30T22:10:39"
+            "number": "9468044369",
+            "timestamp": "2026-08-29T23:08:27"
           },
           "transaction": {
-            "amount": 1948.93,
-            "timestamp": "2026-08-25T22:40:44"
+            "amount": 1681.99,
+            "timestamp": "2026-08-30T09:58:03"
           }
         }
-      }
-    ]
-  },
-  {
-    "person_id": "p_015",
-    "name": "Turvi Barman",
-    "risk_score": 0.1413,
-    "rank": 6,
-    "top_factors": [
+      },
       {
         "feature": "call_burst_score",
         "label": "High frequency of recent calls compared to baseline",
-        "shap_value": 1.07,
+        "shap_value": -0.5641,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "3794738347",
-            "timestamp": "2026-08-30T18:35:24"
+            "number": "3744701204",
+            "timestamp": "2026-08-28T14:04:11"
           },
           "transaction": {
-            "amount": 902.4,
-            "timestamp": "2026-08-30T15:28:17"
+            "amount": 1681.99,
+            "timestamp": "2026-08-30T09:58:03"
           }
         }
-      },
+      }
+    ]
+  },
+  {
+    "person_id": "p_006",
+    "name": "William Maharaj",
+    "risk_score": 0.0053,
+    "rank": 6,
+    "top_factors": [
       {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -296,47 +282,47 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "3794738347",
-            "timestamp": "2026-08-30T18:35:24"
+            "number": "967054668",
+            "timestamp": "2026-08-30T21:48:02"
           },
           "transaction": {
-            "amount": 902.4,
-            "timestamp": "2026-08-30T15:28:17"
+            "amount": 1518.86,
+            "timestamp": "2026-08-30T22:08:47"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "918801994883",
+            "timestamp": "2026-08-04T15:25:36"
+          },
+          "transaction": {
+            "amount": 1518.86,
+            "timestamp": "2026-08-30T22:08:47"
           }
         }
       }
     ]
   },
   {
-    "person_id": "p_031",
-    "name": "Nakul Kumer",
-    "risk_score": 0.0545,
+    "person_id": "p_007",
+    "name": "William Date",
+    "risk_score": 0.0053,
     "rank": 7,
     "top_factors": [
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.1828,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "916425690877",
-            "timestamp": "2026-08-30T12:10:37"
-          },
-          "transaction": {
-            "amount": 1616.62,
-            "timestamp": "2026-08-29T19:37:06"
-          }
-        }
-      },
-      {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -345,45 +331,47 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "916425690877",
-            "timestamp": "2026-08-30T12:10:37"
+            "number": "3545494808",
+            "timestamp": "2026-08-30T15:57:03"
           },
           "transaction": {
-            "amount": 1616.62,
-            "timestamp": "2026-08-29T19:37:06"
+            "amount": 1709.87,
+            "timestamp": "2026-08-30T22:58:56"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "918057198386",
+            "timestamp": "2026-08-17T08:00:55"
+          },
+          "transaction": {
+            "amount": 1709.87,
+            "timestamp": "2026-08-30T22:58:56"
           }
         }
       }
     ]
   },
   {
-    "person_id": "p_019",
-    "name": "Hiral Venkataraman",
-    "risk_score": 0.053,
+    "person_id": "p_008",
+    "name": "Chaitaly Kant",
+    "risk_score": 0.0053,
     "rank": 8,
     "top_factors": [
       {
-        "feature": "txn_spike_score",
-        "label": "Transaction amount spike compared to average",
-        "shap_value": 0.0807,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": [
-            {
-              "amount": 1937.56,
-              "timestamp": "2026-08-26T22:32:00"
-            }
-          ]
-        }
-      },
-      {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -392,16 +380,81 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "916471027677",
-            "timestamp": "2026-08-28T17:56:53"
+            "number": "1167190229",
+            "timestamp": "2026-08-27T12:00:22"
           },
           "transaction": {
-            "amount": 1937.56,
-            "timestamp": "2026-08-26T22:32:00"
+            "amount": 260.23,
+            "timestamp": "2026-08-30T11:19:03"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "1167190229",
+            "timestamp": "2026-08-27T12:00:22"
+          },
+          "transaction": {
+            "amount": 260.23,
+            "timestamp": "2026-08-30T11:19:03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_009",
+    "name": "Sarthak Kakar",
+    "risk_score": 0.0053,
+    "rank": 9,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "1746488771",
+            "timestamp": "2026-08-29T10:19:16"
+          },
+          "transaction": {
+            "amount": 581.94,
+            "timestamp": "2026-08-30T10:20:54"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "1746488771",
+            "timestamp": "2026-08-29T10:19:16"
+          },
+          "transaction": {
+            "amount": 581.94,
+            "timestamp": "2026-08-30T10:20:54"
           }
         }
       }
@@ -410,13 +463,38 @@
   {
     "person_id": "p_010",
     "name": "Yagnesh Shan",
-    "risk_score": 0.052,
-    "rank": 9,
+    "risk_score": 0.0053,
+    "rank": 10,
     "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "5961586578",
+            "timestamp": "2026-08-30T23:42:30"
+          },
+          "transaction": {
+            "amount": 576.15,
+            "timestamp": "2026-08-26T09:04:20"
+          }
+        }
+      },
       {
         "feature": "call_burst_score",
         "label": "High frequency of recent calls compared to baseline",
-        "shap_value": 0.185,
+        "shap_value": -0.5641,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -428,11 +506,19 @@
             "timestamp": "2026-08-26T09:04:20"
           }
         }
-      },
+      }
+    ]
+  },
+  {
+    "person_id": "p_011",
+    "name": "Chandani Balakrishnan",
+    "risk_score": 0.0053,
+    "rank": 11,
+    "top_factors": [
       {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -441,16 +527,277 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "7662702895",
-            "timestamp": "2026-08-30T23:42:30"
+            "number": "4074821759",
+            "timestamp": "2026-08-30T17:14:35"
           },
           "transaction": {
-            "amount": 576.15,
-            "timestamp": "2026-08-26T09:04:20"
+            "amount": 1132.27,
+            "timestamp": "2026-08-30T16:09:05"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "4322259136",
+            "timestamp": "2026-08-15T05:42:17"
+          },
+          "transaction": {
+            "amount": 1132.27,
+            "timestamp": "2026-08-30T16:09:05"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_012",
+    "name": "Gunbir Keer",
+    "risk_score": 0.0053,
+    "rank": 12,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "919084700766",
+            "timestamp": "2026-08-30T18:51:24"
+          },
+          "transaction": {
+            "amount": 846.81,
+            "timestamp": "2026-08-30T18:50:58"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "6368872588",
+            "timestamp": "2026-08-03T09:46:47"
+          },
+          "transaction": {
+            "amount": 846.81,
+            "timestamp": "2026-08-30T18:50:58"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_013",
+    "name": "Gavin Chada",
+    "risk_score": 0.0053,
+    "rank": 13,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "8388516060",
+            "timestamp": "2026-08-30T18:00:20"
+          },
+          "transaction": {
+            "amount": 720.12,
+            "timestamp": "2026-08-30T01:37:22"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "911184895543",
+            "timestamp": "2026-08-17T22:48:05"
+          },
+          "transaction": {
+            "amount": 720.12,
+            "timestamp": "2026-08-30T01:37:22"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_014",
+    "name": "Faras Munshi",
+    "risk_score": 0.0053,
+    "rank": 14,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "1774490581",
+            "timestamp": "2026-08-30T22:01:50"
+          },
+          "transaction": {
+            "amount": 1441.38,
+            "timestamp": "2026-08-25T09:53:29"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "918678085627",
+            "timestamp": "2026-08-28T03:44:58"
+          },
+          "transaction": {
+            "amount": 1441.38,
+            "timestamp": "2026-08-25T09:53:29"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_015",
+    "name": "Turvi Barman",
+    "risk_score": 0.0053,
+    "rank": 15,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "912141888059",
+            "timestamp": "2026-08-30T18:35:24"
+          },
+          "transaction": {
+            "amount": 902.4,
+            "timestamp": "2026-08-30T15:28:17"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "912141888059",
+            "timestamp": "2026-08-30T18:35:24"
+          },
+          "transaction": {
+            "amount": 902.4,
+            "timestamp": "2026-08-30T15:28:17"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_016",
+    "name": "Fiyaz Dyal",
+    "risk_score": 0.0053,
+    "rank": 16,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "2779010432",
+            "timestamp": "2026-08-26T18:15:21"
+          },
+          "transaction": {
+            "amount": 230.96,
+            "timestamp": "2026-08-29T14:56:13"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "2779010432",
+            "timestamp": "2026-08-26T18:15:21"
+          },
+          "transaction": {
+            "amount": 230.96,
+            "timestamp": "2026-08-29T14:56:13"
           }
         }
       }
@@ -459,13 +806,38 @@
   {
     "person_id": "p_017",
     "name": "Diya Mukherjee",
-    "risk_score": 0.0487,
-    "rank": 10,
+    "risk_score": 0.0053,
+    "rank": 17,
     "top_factors": [
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "7021355690",
+            "timestamp": "2026-08-30T21:57:22"
+          },
+          "transaction": {
+            "amount": 1585.64,
+            "timestamp": "2026-08-30T16:22:14"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -477,11 +849,19 @@
             "timestamp": "2026-08-30T16:22:14"
           }
         }
-      },
+      }
+    ]
+  },
+  {
+    "person_id": "p_018",
+    "name": "Dipta Mallick",
+    "risk_score": 0.0053,
+    "rank": 18,
+    "top_factors": [
       {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -490,16 +870,424 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "2755719285",
-            "timestamp": "2026-08-30T21:57:22"
+            "number": "8442258313",
+            "timestamp": "2026-08-29T19:36:08"
           },
           "transaction": {
-            "amount": 1585.64,
-            "timestamp": "2026-08-30T16:22:14"
+            "amount": 1291.73,
+            "timestamp": "2026-08-30T22:02:01"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "9821827448",
+            "timestamp": "2026-08-29T06:07:14"
+          },
+          "transaction": {
+            "amount": 1291.73,
+            "timestamp": "2026-08-30T22:02:01"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_019",
+    "name": "Hiral Venkataraman",
+    "risk_score": 0.0053,
+    "rank": 19,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "3969078447",
+            "timestamp": "2026-08-28T17:56:53"
+          },
+          "transaction": {
+            "amount": 1937.56,
+            "timestamp": "2026-08-26T22:32:00"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "3928861957",
+            "timestamp": "2026-08-18T11:31:39"
+          },
+          "transaction": {
+            "amount": 1937.56,
+            "timestamp": "2026-08-26T22:32:00"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_020",
+    "name": "Wishi Varma",
+    "risk_score": 0.0053,
+    "rank": 20,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "7947055169",
+            "timestamp": "2026-08-30T22:10:39"
+          },
+          "transaction": {
+            "amount": 1948.93,
+            "timestamp": "2026-08-25T22:40:44"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "9060480589",
+            "timestamp": "2026-08-27T18:50:54"
+          },
+          "transaction": {
+            "amount": 1948.93,
+            "timestamp": "2026-08-25T22:40:44"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_021",
+    "name": "Avi Som",
+    "risk_score": 0.0053,
+    "rank": 21,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "283857865",
+            "timestamp": "2026-08-29T00:44:50"
+          },
+          "transaction": {
+            "amount": 790.35,
+            "timestamp": "2026-08-29T12:15:20"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "283857865",
+            "timestamp": "2026-08-29T00:44:50"
+          },
+          "transaction": {
+            "amount": 790.35,
+            "timestamp": "2026-08-29T12:15:20"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_022",
+    "name": "Charles Chaudhry",
+    "risk_score": 0.0053,
+    "rank": 22,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "9045301742",
+            "timestamp": "2026-08-29T23:23:59"
+          },
+          "transaction": {
+            "amount": 1665.01,
+            "timestamp": "2026-08-30T21:34:27"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "4046084325",
+            "timestamp": "2026-08-29T16:49:31"
+          },
+          "transaction": {
+            "amount": 1665.01,
+            "timestamp": "2026-08-30T21:34:27"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_023",
+    "name": "Mason Gala",
+    "risk_score": 0.0053,
+    "rank": 23,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "910284395995",
+            "timestamp": "2026-08-29T19:17:48"
+          },
+          "transaction": {
+            "amount": 1632.43,
+            "timestamp": "2026-08-26T10:32:48"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "910284395995",
+            "timestamp": "2026-08-29T19:17:48"
+          },
+          "transaction": {
+            "amount": 1632.43,
+            "timestamp": "2026-08-26T10:32:48"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_024",
+    "name": "Manthan Mital",
+    "risk_score": 0.0053,
+    "rank": 24,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "6990139837",
+            "timestamp": "2026-08-29T17:55:53"
+          },
+          "transaction": {
+            "amount": 1658.43,
+            "timestamp": "2026-08-29T08:54:55"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "6990139837",
+            "timestamp": "2026-08-29T17:55:53"
+          },
+          "transaction": {
+            "amount": 1658.43,
+            "timestamp": "2026-08-29T08:54:55"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_025",
+    "name": "Rohan Narayan",
+    "risk_score": 0.0053,
+    "rank": 25,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "7933410166",
+            "timestamp": "2026-08-30T07:05:06"
+          },
+          "transaction": {
+            "amount": 640.76,
+            "timestamp": "2026-08-30T09:08:55"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "8179469548",
+            "timestamp": "2026-08-23T17:22:50"
+          },
+          "transaction": {
+            "amount": 640.76,
+            "timestamp": "2026-08-30T09:08:55"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_026",
+    "name": "Chatresh Chaudhari",
+    "risk_score": 0.0053,
+    "rank": 26,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "4647154379",
+            "timestamp": "2026-08-30T05:59:12"
+          },
+          "transaction": {
+            "amount": 1457.9,
+            "timestamp": "2026-08-30T05:42:39"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "568299629",
+            "timestamp": "2026-08-14T08:17:18"
+          },
+          "transaction": {
+            "amount": 1457.9,
+            "timestamp": "2026-08-30T05:42:39"
           }
         }
       }
@@ -508,13 +1296,38 @@
   {
     "person_id": "p_027",
     "name": "Tanvi Chhabra",
-    "risk_score": 0.0487,
-    "rank": 11,
+    "risk_score": 0.0053,
+    "rank": 27,
     "top_factors": [
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "917374167243",
+            "timestamp": "2026-08-29T19:37:20"
+          },
+          "transaction": {
+            "amount": 1530.4,
+            "timestamp": "2026-08-30T03:08:56"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -526,11 +1339,19 @@
             "timestamp": "2026-08-30T03:08:56"
           }
         }
-      },
+      }
+    ]
+  },
+  {
+    "person_id": "p_028",
+    "name": "Nidhi Gour",
+    "risk_score": 0.0053,
+    "rank": 28,
+    "top_factors": [
       {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -539,16 +1360,228 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "917751401051",
-            "timestamp": "2026-08-29T19:37:20"
+            "number": "4699733549",
+            "timestamp": "2026-08-30T21:06:57"
           },
           "transaction": {
-            "amount": 1530.4,
-            "timestamp": "2026-08-30T03:08:56"
+            "amount": 676.36,
+            "timestamp": "2026-08-29T20:03:40"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "4699733549",
+            "timestamp": "2026-08-30T21:06:57"
+          },
+          "transaction": {
+            "amount": 676.36,
+            "timestamp": "2026-08-29T20:03:40"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_029",
+    "name": "Samuel Bhargava",
+    "risk_score": 0.0053,
+    "rank": 29,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "7500170127",
+            "timestamp": "2026-08-30T12:21:29"
+          },
+          "transaction": {
+            "amount": 1523.74,
+            "timestamp": "2026-08-29T23:43:52"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "8950097519",
+            "timestamp": "2026-08-23T22:54:54"
+          },
+          "transaction": {
+            "amount": 1523.74,
+            "timestamp": "2026-08-29T23:43:52"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_030",
+    "name": "Logan Dasgupta",
+    "risk_score": 0.0053,
+    "rank": 30,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "2410564814",
+            "timestamp": "2026-08-30T12:12:19"
+          },
+          "transaction": {
+            "amount": 1535.91,
+            "timestamp": "2026-08-30T05:03:03"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "6580185694",
+            "timestamp": "2026-08-14T13:22:21"
+          },
+          "transaction": {
+            "amount": 1535.91,
+            "timestamp": "2026-08-30T05:03:03"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_031",
+    "name": "Nakul Kumer",
+    "risk_score": 0.0053,
+    "rank": 31,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "916425690877",
+            "timestamp": "2026-08-30T12:10:37"
+          },
+          "transaction": {
+            "amount": 1616.62,
+            "timestamp": "2026-08-29T19:37:06"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "916425690877",
+            "timestamp": "2026-08-30T12:10:37"
+          },
+          "transaction": {
+            "amount": 1616.62,
+            "timestamp": "2026-08-29T19:37:06"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_032",
+    "name": "Unnati Murthy",
+    "risk_score": 0.0053,
+    "rank": 32,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "914768701462",
+            "timestamp": "2026-08-29T16:02:09"
+          },
+          "transaction": {
+            "amount": 1355.39,
+            "timestamp": "2026-08-30T00:36:33"
+          }
+        }
+      },
+      {
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": {
+            "number": "2739021962",
+            "timestamp": "2026-08-17T23:34:10"
+          },
+          "transaction": {
+            "amount": 1355.39,
+            "timestamp": "2026-08-30T00:36:33"
           }
         }
       }
@@ -557,13 +1590,22 @@
   {
     "person_id": "p_033",
     "name": "Ryan Vora",
-    "risk_score": 0.0487,
-    "rank": 12,
+    "risk_score": 0.0053,
+    "rank": 33,
     "top_factors": [
       {
-        "feature": "new_contact_ratio",
-        "label": "High proportion of recent calls to unknown numbers",
-        "shap_value": 0.5068,
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": -0.5218,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": []
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -577,18 +1619,9 @@
         }
       },
       {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
@@ -606,13 +1639,13 @@
   {
     "person_id": "p_034",
     "name": "Timothy Chawla",
-    "risk_score": 0.0435,
-    "rank": 13,
+    "risk_score": 0.0053,
+    "rank": 34,
     "top_factors": [
       {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -621,11 +1654,11 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "541152621",
+            "number": "8625652704",
             "timestamp": "2026-08-30T17:43:00"
           },
           "transaction": {
@@ -635,1025 +1668,18 @@
         }
       },
       {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-28T16:03:01"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_005",
-    "name": "Lekha Gupta",
-    "risk_score": 0.0359,
-    "rank": 14,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "911727889579",
-            "timestamp": "2026-08-29T23:08:27"
+            "number": "8625652704",
+            "timestamp": "2026-08-30T17:43:00"
           },
           "transaction": {
-            "amount": 1681.99,
-            "timestamp": "2026-08-30T09:58:03"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-26T18:55:00"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_007",
-    "name": "William Date",
-    "risk_score": 0.0359,
-    "rank": 15,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "3799650752",
-            "timestamp": "2026-08-30T15:57:03"
-          },
-          "transaction": {
-            "amount": 1709.87,
-            "timestamp": "2026-08-30T22:58:56"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-28T16:32:57"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_025",
-    "name": "Rohan Narayan",
-    "risk_score": 0.0354,
-    "rank": 16,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "913120387509",
-            "timestamp": "2026-08-30T07:05:06"
-          },
-          "transaction": {
-            "amount": 640.76,
-            "timestamp": "2026-08-30T09:08:55"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-29T05:06:53"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_022",
-    "name": "Charles Chaudhry",
-    "risk_score": 0.029,
-    "rank": 17,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "6685161227",
-            "timestamp": "2026-08-29T23:23:59"
-          },
-          "transaction": {
-            "amount": 1665.01,
-            "timestamp": "2026-08-30T21:34:27"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-30T06:52:52"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_028",
-    "name": "Nidhi Gour",
-    "risk_score": 0.0289,
-    "rank": 18,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "4699733549",
-            "timestamp": "2026-08-30T21:06:57"
-          },
-          "transaction": {
-            "amount": 676.36,
-            "timestamp": "2026-08-29T20:03:40"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-27T06:33:49"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_030",
-    "name": "Logan Dasgupta",
-    "risk_score": 0.0287,
-    "rank": 19,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "910202758842",
-            "timestamp": "2026-08-30T12:12:19"
-          },
-          "transaction": {
-            "amount": 1535.91,
-            "timestamp": "2026-08-30T05:03:03"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-21T19:43:23"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_006",
-    "name": "William Maharaj",
-    "risk_score": 0.0233,
-    "rank": 20,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "8053100330",
-            "timestamp": "2026-08-30T21:48:02"
-          },
-          "transaction": {
-            "amount": 1518.86,
-            "timestamp": "2026-08-30T22:08:47"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-28T06:55:55"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_008",
-    "name": "Chaitaly Kant",
-    "risk_score": 0.0233,
-    "rank": 21,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "7749649909",
-            "timestamp": "2026-08-27T12:00:22"
-          },
-          "transaction": {
-            "amount": 260.23,
-            "timestamp": "2026-08-30T11:19:03"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-21T08:48:22"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_009",
-    "name": "Sarthak Kakar",
-    "risk_score": 0.0233,
-    "rank": 22,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "7175655125",
-            "timestamp": "2026-08-29T10:19:16"
-          },
-          "transaction": {
-            "amount": 581.94,
-            "timestamp": "2026-08-30T10:20:54"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-27T16:25:49"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_011",
-    "name": "Chandani Balakrishnan",
-    "risk_score": 0.0233,
-    "rank": 23,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "5944064090",
-            "timestamp": "2026-08-30T17:14:35"
-          },
-          "transaction": {
-            "amount": 1132.27,
-            "timestamp": "2026-08-30T16:09:05"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-23T02:21:53"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_012",
-    "name": "Gunbir Keer",
-    "risk_score": 0.0233,
-    "rank": 24,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "6615654527",
-            "timestamp": "2026-08-30T18:51:24"
-          },
-          "transaction": {
-            "amount": 846.81,
-            "timestamp": "2026-08-30T18:50:58"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-26T11:31:31"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_013",
-    "name": "Gavin Chada",
-    "risk_score": 0.0233,
-    "rank": 25,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "8403690034",
-            "timestamp": "2026-08-30T18:00:20"
-          },
-          "transaction": {
-            "amount": 720.12,
-            "timestamp": "2026-08-30T01:37:22"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-18T22:35:29"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_014",
-    "name": "Faras Munshi",
-    "risk_score": 0.0233,
-    "rank": 26,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "1774490581",
-            "timestamp": "2026-08-30T22:01:50"
-          },
-          "transaction": {
-            "amount": 1441.38,
-            "timestamp": "2026-08-25T09:53:29"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-21T03:55:09"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_016",
-    "name": "Fiyaz Dyal",
-    "risk_score": 0.0233,
-    "rank": 27,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "2779010432",
-            "timestamp": "2026-08-26T18:15:21"
-          },
-          "transaction": {
-            "amount": 230.96,
-            "timestamp": "2026-08-29T14:56:13"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-30T05:40:46"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_018",
-    "name": "Dipta Mallick",
-    "risk_score": 0.0233,
-    "rank": 28,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "915177852892",
-            "timestamp": "2026-08-29T19:36:08"
-          },
-          "transaction": {
-            "amount": 1291.73,
-            "timestamp": "2026-08-30T22:02:01"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-14T17:52:23"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_021",
-    "name": "Avi Som",
-    "risk_score": 0.0233,
-    "rank": 29,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "8434437575",
-            "timestamp": "2026-08-29T00:44:50"
-          },
-          "transaction": {
-            "amount": 790.35,
-            "timestamp": "2026-08-29T12:15:20"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-25T17:40:44"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_023",
-    "name": "Mason Gala",
-    "risk_score": 0.0233,
-    "rank": 30,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "912656766182",
-            "timestamp": "2026-08-29T19:17:48"
-          },
-          "transaction": {
-            "amount": 1632.43,
-            "timestamp": "2026-08-26T10:32:48"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-22T12:27:28"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_024",
-    "name": "Manthan Mital",
-    "risk_score": 0.0233,
-    "rank": 31,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "6990139837",
-            "timestamp": "2026-08-29T17:55:53"
-          },
-          "transaction": {
-            "amount": 1658.43,
-            "timestamp": "2026-08-29T08:54:55"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-30T21:42:30"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_026",
-    "name": "Chatresh Chaudhari",
-    "risk_score": 0.0233,
-    "rank": 32,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "5412126788",
-            "timestamp": "2026-08-30T05:59:12"
-          },
-          "transaction": {
-            "amount": 1457.9,
-            "timestamp": "2026-08-30T05:42:39"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-30T01:33:40"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_029",
-    "name": "Samuel Bhargava",
-    "risk_score": 0.0233,
-    "rank": 33,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "4262218909",
-            "timestamp": "2026-08-30T12:21:29"
-          },
-          "transaction": {
-            "amount": 1523.74,
-            "timestamp": "2026-08-29T23:43:52"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-29T19:16:52"
-          }
-        }
-      }
-    ]
-  },
-  {
-    "person_id": "p_032",
-    "name": "Unnati Murthy",
-    "risk_score": 0.0233,
-    "rank": 34,
-    "top_factors": [
-      {
-        "feature": "structuring_flag",
-        "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "transaction_list",
-          "transactions": []
-        }
-      },
-      {
-        "feature": "call_txn_proximity",
-        "label": "Call followed by large transaction",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "call_and_transaction",
-          "call": {
-            "number": "910032365199",
-            "timestamp": "2026-08-29T16:02:09"
-          },
-          "transaction": {
-            "amount": 1355.39,
-            "timestamp": "2026-08-30T00:36:33"
-          }
-        }
-      },
-      {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
-        "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-28T05:10:07"
+            "amount": 1532.91,
+            "timestamp": "2026-08-30T02:06:57"
           }
         }
       }
@@ -1662,13 +1688,13 @@
   {
     "person_id": "p_035",
     "name": "Utkarsh Bhat",
-    "risk_score": 0.0233,
+    "risk_score": 0.0053,
     "rank": 35,
     "top_factors": [
       {
         "feature": "structuring_flag",
         "label": "Multiple transactions just under reporting threshold",
-        "shap_value": 0.0,
+        "shap_value": -0.5218,
         "evidence": {
           "type": "transaction_list",
           "transactions": []
@@ -1677,11 +1703,11 @@
       {
         "feature": "call_txn_proximity",
         "label": "Call followed by large transaction",
-        "shap_value": 0.0,
+        "shap_value": -0.5446,
         "evidence": {
           "type": "call_and_transaction",
           "call": {
-            "number": "8564679970",
+            "number": "914629960653",
             "timestamp": "2026-08-30T14:22:46"
           },
           "transaction": {
@@ -1691,17 +1717,18 @@
         }
       },
       {
-        "feature": "social_lifestyle_flag",
-        "label": "Lifestyle post inconsistent with declared income",
-        "shap_value": 0.0,
+        "feature": "call_burst_score",
+        "label": "High frequency of recent calls compared to baseline",
+        "shap_value": -0.5641,
         "evidence": {
-          "type": "social_post",
-          "post": {
-            "content_tags": [
-              "daily",
-              "life"
-            ],
-            "timestamp": "2026-08-30T10:32:12"
+          "type": "call_and_transaction",
+          "call": {
+            "number": "5790552818",
+            "timestamp": "2026-08-20T02:05:52"
+          },
+          "transaction": {
+            "amount": 287.5,
+            "timestamp": "2026-08-30T04:58:39"
           }
         }
       }
