@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Zinc neutral palette — no blue/purple tint */
+  --bg: #09090b;
+  --surface: #18181b;
+  --raised: #27272a;
+  --border: #3f3f46;
+  --border-subtle: #27272a;
+
+  /* Text hierarchy */
+  --text-1: #fafafa;
+  --text-2: #a1a1aa;
+  --text-3: #71717a;
+
+  /* Functional risk colors — used only for data */
+  --risk-high: #ef4444;
+  --risk-mid: #f59e0b;
+  --risk-low: #71717a;
+
+  /* Fonts */
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace;
+
+  /* Type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+
+  /* Spacing */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text-1);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* App shell */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  padding: var(--sp-4) var(--sp-8);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.topbar__link {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--text-1);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.main {
+  flex: 1;
+  padding: var(--sp-10) var(--sp-8);
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Shared states */
+.loading {
+  padding: var(--sp-12) 0;
+  text-align: center;
+  font-size: var(--text-base);
+  color: var(--text-3);
+}
+
+.error-state {
+  padding: var(--sp-12) 0;
+  text-align: center;
+  font-size: var(--text-base);
+  color: var(--risk-high);
+}
+
+@media (max-width: 640px) {
+  .main { padding: var(--sp-6) var(--sp-4); }
+  .topbar { padding: var(--sp-3) var(--sp-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

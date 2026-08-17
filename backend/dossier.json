@@ -1,0 +1,312 @@
+[
+  {
+    "person_id": "p_001",
+    "name": "Person 1",
+    "risk_score": 0.92,
+    "rank": 1,
+    "top_factors": [
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.52,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "98XXXXX01", "timestamp": "2026-03-01T09:15:00" },
+          "transaction": { "amount": 520000, "timestamp": "2026-03-01T09:22:00" }
+        }
+      },
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.35,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 49500, "timestamp": "2026-02-28T11:00:00" },
+            { "amount": 49800, "timestamp": "2026-02-28T14:30:00" },
+            { "amount": 48900, "timestamp": "2026-02-28T17:45:00" }
+          ]
+        }
+      },
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.20,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["luxury_car", "foreign_travel"], "timestamp": "2026-02-25T19:00:00" }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_002",
+    "name": "Person 2",
+    "risk_score": 0.87,
+    "rank": 2,
+    "top_factors": [
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.45,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "98XXXXX02", "timestamp": "2026-03-03T14:02:00" },
+          "transaction": { "amount": 300000, "timestamp": "2026-03-03T14:10:00" }
+        }
+      },
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.30,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 48500, "timestamp": "2026-03-02T10:15:00" },
+            { "amount": 49000, "timestamp": "2026-03-02T16:40:00" }
+          ]
+        }
+      },
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.25,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["luxury_item"], "timestamp": "2026-03-01T20:30:00" }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_003",
+    "name": "Person 3",
+    "risk_score": 0.78,
+    "rank": 3,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.42,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 49200, "timestamp": "2026-03-05T08:00:00" },
+            { "amount": 49700, "timestamp": "2026-03-05T12:00:00" },
+            { "amount": 48800, "timestamp": "2026-03-05T16:30:00" },
+            { "amount": 49100, "timestamp": "2026-03-06T09:00:00" }
+          ]
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.28,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "97XXXXX03", "timestamp": "2026-03-04T11:30:00" },
+          "transaction": { "amount": 195000, "timestamp": "2026-03-04T11:38:00" }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_004",
+    "name": "Person 4",
+    "risk_score": 0.72,
+    "rank": 4,
+    "top_factors": [
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.38,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["luxury_watch", "designer_clothing", "fine_dining"], "timestamp": "2026-02-20T18:45:00" }
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.30,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "99XXXXX04", "timestamp": "2026-03-07T16:00:00" },
+          "transaction": { "amount": 245000, "timestamp": "2026-03-07T16:12:00" }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_005",
+    "name": "Person 5",
+    "risk_score": 0.65,
+    "rank": 5,
+    "top_factors": [
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.35,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "96XXXXX05", "timestamp": "2026-03-08T10:20:00" },
+          "transaction": { "amount": 175000, "timestamp": "2026-03-08T10:35:00" }
+        }
+      },
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.22,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 47500, "timestamp": "2026-03-07T09:00:00" },
+            { "amount": 48000, "timestamp": "2026-03-07T15:00:00" }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_006",
+    "name": "Person 6",
+    "risk_score": 0.55,
+    "rank": 6,
+    "top_factors": [
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.32,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 49900, "timestamp": "2026-03-10T10:00:00" },
+            { "amount": 49500, "timestamp": "2026-03-10T14:30:00" },
+            { "amount": 48700, "timestamp": "2026-03-11T09:15:00" }
+          ]
+        }
+      },
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.18,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["foreign_travel"], "timestamp": "2026-03-09T21:00:00" }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_007",
+    "name": "Person 7",
+    "risk_score": 0.48,
+    "rank": 7,
+    "top_factors": [
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.28,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["luxury_item", "high_end_restaurant"], "timestamp": "2026-03-12T13:30:00" }
+        }
+      },
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.15,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "95XXXXX07", "timestamp": "2026-03-13T17:00:00" },
+          "transaction": { "amount": 85000, "timestamp": "2026-03-13T17:15:00" }
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_008",
+    "name": "Person 8",
+    "risk_score": 0.35,
+    "rank": 8,
+    "top_factors": [
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.20,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "94XXXXX08", "timestamp": "2026-03-14T08:45:00" },
+          "transaction": { "amount": 65000, "timestamp": "2026-03-14T09:00:00" }
+        }
+      },
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.12,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 45000, "timestamp": "2026-03-13T11:00:00" },
+            { "amount": 46500, "timestamp": "2026-03-14T10:00:00" }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_009",
+    "name": "Person 9",
+    "risk_score": 0.22,
+    "rank": 9,
+    "top_factors": [
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.15,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["designer_clothing"], "timestamp": "2026-03-15T16:00:00" }
+        }
+      },
+      {
+        "feature": "structuring_flag",
+        "label": "Multiple transactions just under reporting threshold",
+        "shap_value": 0.08,
+        "evidence": {
+          "type": "transaction_list",
+          "transactions": [
+            { "amount": 42000, "timestamp": "2026-03-15T09:30:00" }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "person_id": "p_010",
+    "name": "Person 10",
+    "risk_score": 0.11,
+    "rank": 10,
+    "top_factors": [
+      {
+        "feature": "call_txn_proximity",
+        "label": "Call followed by large transaction",
+        "shap_value": 0.08,
+        "evidence": {
+          "type": "call_and_transaction",
+          "call": { "number": "93XXXXX10", "timestamp": "2026-03-16T12:00:00" },
+          "transaction": { "amount": 35000, "timestamp": "2026-03-16T12:20:00" }
+        }
+      },
+      {
+        "feature": "social_lifestyle_flag",
+        "label": "Lifestyle post inconsistent with declared income",
+        "shap_value": 0.05,
+        "evidence": {
+          "type": "social_post",
+          "post": { "content_tags": ["fine_dining"], "timestamp": "2026-03-14T20:00:00" }
+        }
+      }
+    ]
+  }
+]
