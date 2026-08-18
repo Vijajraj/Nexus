@@ -15,7 +15,7 @@ End-to-end data generation, feature engineering, risk modeling, and evidence dos
 │   ├── social_posts.csv   # Social media posts
 │   ├── features.csv       # Engineered feature table
 │   └── predictions_shap.csv # Predicted risk scores and SHAP values
-├── frontend/              # React frontend dashboard
+├── frontend/              # React frontend dashboard (Vite + React)
 ├── src/
 │   ├── generate_data.py   # Step 1: Synthetic data generation
 │   ├── feature_engineering.py # Step 2: Feature extraction
@@ -24,6 +24,7 @@ End-to-end data generation, feature engineering, risk modeling, and evidence dos
 ├── tests/
 │   └── test_pipeline.py   # Unit testing suite
 ├── run_pipeline.py        # Master pipeline orchestrator
+├── run_dev.py             # Unified full-stack development server runner
 └── requirements.txt       # Python dependencies
 ```
 
@@ -44,4 +45,10 @@ python run_pipeline.py
 Verifies code correctness, feature contrasts, model scores, and schema constraints:
 ```bash
 python tests/test_pipeline.py
+```
+
+### 4. Launch the Full-Stack Application (Frontend + Backend)
+To launch both the FastAPI backend (`http://localhost:8000`) and the React dashboard (`http://localhost:5173`) with unified log output in a single command:
+```bash
+python run_dev.py
 ```
