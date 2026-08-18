@@ -4,19 +4,19 @@ Nexus is an end-to-end investigative anomaly detection system designed to uncove
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
 - **Synthetic Data Generation**: Simulates realistic multi-table relational records (people, phone calls, financial transactions, and social media posts) using Faker.
 - **Planted Anomaly Patterns**:
   - *Call-to-Transaction Proximity & Lifestyle Flags*: Unfamiliar calls followed quickly by anomalous transaction spikes and subsequent luxury social posts.
   - *Structuring (Smurfing)*: Multiple repeated transactions just below legal reporting thresholds (₹45,000–₹49,999).
-- **Explainable ML (XGBoost + SHAP)**: Computes personalized risk scores (0–100%) and feature attribution values (TreeExplainer) explaining *why* an individual is high risk.
+- **Explainable ML (XGBoost + SHAP)**: Computes personalized risk scores (0–100%) and feature attribution values (TreeExplainer) explaining why an individual is high risk.
 - **Evidence Dossier System**: Maps each risk factor directly to the raw evidence records (`call_and_transaction`, `transaction_list`, `social_post`).
 - **Interactive UI**: Clean, responsive React dashboard with sortable risk rankings, SHAP breakdown charts, and deep-dive evidence views.
 
 ---
 
-## ⚡ Quickstart Guide (Get Started in 2 Minutes)
+## Quickstart Guide
 
 ### Prerequisites
 Make sure you have installed on your computer:
@@ -46,15 +46,15 @@ python run_dev.py
 ```
 
 Once running, open your web browser:
-- 🌐 **Web Dashboard**: [http://localhost:5173](http://localhost:5173)
-- 🔌 **API Documentation (Swagger UI)**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-- 📊 **Risk Rankings API Endpoint**: [http://127.0.0.1:8000/rankings](http://127.0.0.1:8000/rankings)
+- **Web Dashboard**: http://localhost:5173
+- **API Documentation (Swagger UI)**: http://127.0.0.1:8000/docs
+- **Risk Rankings API Endpoint**: http://127.0.0.1:8000/rankings
 
 *To stop the servers, press `Ctrl + C`.*
 
 ---
 
-## 🔬 Running the Data & ML Pipeline Manually
+## Running the Data & ML Pipeline Manually
 
 If you want to generate fresh synthetic data, re-engineer features, retrain the XGBoost model, and compile a new `dossier.json`:
 
@@ -70,7 +70,7 @@ python run_pipeline.py
 
 ---
 
-## 🧪 Running Unit Tests
+## Running Unit Tests
 
 Run the automated test suite to verify data schemas, feature contrast, model accuracy, and API contracts:
 
@@ -80,7 +80,7 @@ python tests/test_pipeline.py
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Nexus/
@@ -115,7 +115,7 @@ Nexus/
 
 ---
 
-## 🛠️ The 6 Risk Features Explained
+## The 6 Risk Features Explained
 
 | Feature | Description |
 | :--- | :--- |
