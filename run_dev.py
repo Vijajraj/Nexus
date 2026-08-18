@@ -25,7 +25,7 @@ def run_dev():
         subprocess.run([npm_cmd, "install"], cwd=frontend_dir, check=True)
 
     print("==================================================")
-    print("🚀 Starting Nexus Full-Stack Environment")
+    print("[*] Starting Nexus Full-Stack Environment")
     print("   - Backend API: http://127.0.0.1:8000")
     print("   - Frontend UI: http://localhost:5173")
     print("   Press Ctrl+C to terminate both servers")
