@@ -41,3 +41,9 @@ def get_person(person_id: str):
         if entry["person_id"] == person_id:
             return entry
     raise HTTPException(status_code=404, detail=f"Person '{person_id}' not found")
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+

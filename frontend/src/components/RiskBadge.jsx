@@ -1,17 +1,29 @@
-import "./RiskBadge.css";
+import { getRiskLevel } from "../utils/formatters";
 
-export default function RiskBadge({ score }) {
-  let level, text;
-  if (score >= 0.7) {
-    level = "high";
-    text = "High";
-  } else if (score >= 0.4) {
-    level = "medium";
-    text = "Med";
-  } else {
-    level = "low";
-    text = "Low";
-  }
+/**
+ * RiskBadge component displaying CRITICAL / ELEVATED / BASELINE with accessible text & color
+ * @param {{ score: number, label?: string }} props
+ */
+export default function RiskBadge({ score, label }) {
+  const level = label ? label.toUpperCase() : getRiskLevel(score);
+  const badgeClass =
+    level === "HIGH"
+      ? "risk-badge--high"
+      : level === "MEDIUM" || level === "MED"
+      ? "risk-badge--medium"
+      : "risk-badge--low";
 
-  return <span className={`badge badge--${level}`}>{text}</span>;
+  const displayText =
+    level === "HIGH"
+      ? "High"
+      : level === "MEDIUM" || level === "MED"
+      ? "Medium"
+      : "Low";
+
+  return (
+    <span className={`risk-badge ${badgeClass}`} role="status" aria-label={`Risk Level: ${displayText}`}>
+      <span className="risk-badge-dot" aria-hidden="true" />
+      <span>{displayText}</span>
+    </span>
+  );
 }
